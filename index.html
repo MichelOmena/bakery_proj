@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./src/img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+    <link rel="stylesheet" href="./src/styles/styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <title>Crisnuel</title>
+</head>
+<body>
+    <header>
+        <!--navBar-->
+        <nav id="navbar">   
+            <i class="fa-solid fa-store" id="nav_logo">Padaria & Pastelaria</i>
+
+            <ul id="nav_list">
+                <li class="nav-item active">
+                    <a href="#home">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#menu">Menu</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#testimonials">Contactos</a>
+                </li>
+            </ul>
+
+            <!--Botao padrao-->
+            <button class="btn-default">
+                Encomende já, clique aqui
+            </button>
+
+            <button id="mobile_btn">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </nav>
+        <div id="mobile_menu">
+            <ul id="mobile_nav_list">
+                <li class="nav-item">
+                    <a href="#home">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#menu">Menu</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#testimonials">Contactos</a>
+                </li>
+            </ul>
+
+            <!--Botao padrao-->
+            <button class="btn-default">
+                Encomende já, clique aqui
+            </button>
+
+        </div>
+    </header>
+
+    <main id="content">
+        <section id="home">
+            <div id="cta">
+                <h1 class="title">
+                    O sabor vai até
+                    <span>você</span>
+                </h1>
+
+                <p class="description">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi velit saepe hic ratione quasi minus autem at soluta, cupiditate dignissimos reprehenderit, explicabo ea amet accusantium inventore sint id nemo reiciendis!
+                </p>
+                <div class="cta_buttons">
+                    <a href="#" class="btn-default">
+                        Nossas especialidades 
+                    </a>
+
+                    <a href="tel:+11111111111" id="phone_button">
+                        <button class="btn-default">
+                            <i class="fa-solid fa-phone"></i>
+                            2376 2736263
+                        </button>
+                    </a>
+                </div>
+
+                <div class="social-media-buttons">
+
+                    <!--icon whatsapp-->
+                    <a href="">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+
+                    <!--icon instagram-->
+                    <a href="">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                    <!--icon facebook-->
+                    <a href="">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+
+                </div>
+            </div>
+
+            <div class="banner">
+
+            </div>
+        </section>
+    </main>
+    <!--Script JS-->
+    <script src="./src/javascript/scripts.js"></script>
+</body>
+</html>
