@@ -2,6 +2,8 @@
 include 'cards.php';
 //function
 $cards = getCards();
+$leftCards = $cards['left_cards'];
+$rightCards = $cards['right_cards'];
 ?>
 
 <!DOCTYPE html>
@@ -117,18 +119,21 @@ $cards = getCards();
     </main>
 
     <section id="menu">
+        <div class="first_section">
         <h2 class="section-title">Mais vendidos</h2>
         <h3 class="section-subtitle">Nossas especialidades</h3>
+        </div>
 
-        <div class="container">
+        <div class="d-flex justify-content-between row"> <!-- d-flex row for sidebar list-->
+        <div class="container d-flex justify-content-center row col-6">
             <!--loop for dishes-->
-            <?php foreach ($cards as $card): ?>
+            <?php foreach ($leftCards as $card): ?>
+                <!-- <div class="col-md-6"> -->
             <div id="dishes">
                 <div class="dish">
                     <div class="dish-heart">
                         <i class="fa-solid fa-heart"></i>
-                    </div>
-
+            </div>               
                     <img src="<?php echo $card['imagem']; ?>" alt="<?php echo $card['titulo']; ?>" class="w-25 img-auto">
 
                     <h3 class="dish-title">
@@ -155,6 +160,46 @@ $cards = getCards();
                 </div>
             </div>
             <?php endforeach; ?>
+        </div>
+
+
+
+        <div class="container d-flex justify-content-center row col-6">
+            <!--loop for dishes-->
+            <?php foreach ($rightCards as $card): ?>
+                <!-- <div class="col-md-6"> -->
+            <div id="dishes">
+                <div class="dish">
+                    <div class="dish-heart">
+                        <i class="fa-solid fa-heart"></i>
+            </div>               
+                    <img src="<?php echo $card['imagem']; ?>" alt="<?php echo $card['titulo']; ?>" class="w-25 img-auto">
+
+                    <h3 class="dish-title">
+                       <?php echo $card['titulo']; ?>
+                    </h3>
+                    <span class="dish-description">
+                        <?php echo $card['descricao']; ?>
+                    </span>
+
+                    <div class="dish-rate">
+                        <?php for ($i = 0; $i < $card['avaliacao']; $i++): ?>
+                        <i class="fa-solid fa-star"></i>
+                        <?php endfor; ?>
+                        
+                        <span>(<?php echo $card['avaliacao_total']; ?>+)</span>
+                    </div>
+
+                    <div class="dish-price">
+                        <h4><?php echo $card['preco']; ?> €</h4>
+                        <button class="btn-default">
+                            <i class="fa-solid fa-basket-shopping"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <?php endforeach; ?>
+        </div>
         </div>
     </section>
     <!--Script JS-->
